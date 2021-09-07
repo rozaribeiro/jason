@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev tech challenge template</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <%- include('partials/header') -%>
+
+    <main>
+
+      <!-- New member form -->
+      <h2>Ajouter un(e) Argonaute</h2>
+      <form class="new-member-form" action="/addargo" method="POST">
+        <label for="name">Nom de l&apos;Argonaute</label>
+        <input id="name" name="name" type="text" placeholder="Charalampos" />
+        <button type="submit">Envoyer</button>
+      </form>
+
+      <!-- Member list -->
+      <h2>Membres de l'équipage</h2>
+
+      <% if (argonautes.length==0) { %>
+        <p class="message">Aucun Argonaute enregistré!</p>
+        <% } else { %>
+          <section class="member-list">
+            <% argonautes.forEach((item)=> { %>
+              <div class="member-item">
+                <%= item.name %>
+              </div>
+              <% }) %>
+          </section>
+          <% } %>
+
+    </main>
+    <%- include('partials/footer') -%>
+</body>
+
+</html>
