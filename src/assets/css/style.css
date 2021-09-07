@@ -33,14 +33,24 @@ h1, h2 {
 }
 
 .message {
-  color: red;
   text-align: center;
+  font-size: xx-large;
+}
+
+.linkhome {
+  color:red;
+  text-decoration: none;
   font-size: x-large;
+
 }
 
 label {
   display: block;
   margin-bottom: 0.5em;
+}
+
+p {
+  text-align: center;
 }
 
 .new-member-form {

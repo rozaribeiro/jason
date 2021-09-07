@@ -17,14 +17,12 @@ exports.getAll = async (req, res) => {
     try {
     var data = await model.getAll();
     res.render("index.ejs", { argonautes: data.rows });
-    console.log(data.rows);
   } catch (err) {
     console.error(err);
-    res.send("Une erreur est survenue, veuillez réessayer plus tard");
+    res.render("error.ejs", { message:"Une erreur est survenue, veuillez réessayer plus tard" });
   }
 };
 
 exports.error404 = async (req, res) => {
-  // res.send("La ressource est introuvable");
-  res.send("Resource introuvable");
+  res.render("error.ejs", { message:"La ressource est introuvable" });
 };

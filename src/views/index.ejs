@@ -25,18 +25,18 @@
       <!-- Member list -->
       <h2>Membres de l'équipage</h2>
 
-      <% if (argonautes.length==0) { %>
-        <p class="message">Aucun Argonaute enregistré!</p>
-        <% } else { %>
-          <section class="member-list">
-            <% argonautes.forEach((item)=> { %>
-              <div class="member-item">
-                <%= item.name %>
-              </div>
-              <% }) %>
-          </section>
-          <% } %>
-
+        <% if (argonautes.length==0) { %>
+          <p class="message">Aucun Argonaute enregistré!</p>
+          <% } else { %>
+            <section class="member-list">
+              <% argonautes.forEach((item)=> { %>
+                <div class="member-item">
+                  <%= item.name %>
+                </div>
+                <% }) %>
+            </section>
+            <% } %>
+            
     </main>
     <%- include('partials/footer') -%>
 </body>
